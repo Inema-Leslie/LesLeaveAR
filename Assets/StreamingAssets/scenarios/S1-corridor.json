@@ -1,0 +1,178 @@
+{
+  "id": "S1-corridor",
+  "version": 1,
+  "title": "Classroom to corridor fire",
+  "description": "You are standing in a classroom doorway. Smoke has been detected and a fire is spreading in the corridor. Raise the alarm, test the doors, stay below the smoke, avoid the elevator and reach the assembly point outside.",
+  "timeLimits": [
+    300,
+    300,
+    300
+  ],
+  "entities": [
+    {
+      "type": "FireAlarm",
+      "id": "alarm",
+      "pos": {
+        "x": -1.0,
+        "y": 0,
+        "z": 0.8
+      },
+      "yaw": 0,
+      "hot": false,
+      "activateAt": 0,
+      "blockAt": 0
+    },
+    {
+      "type": "Extinguisher",
+      "id": "extinguisher",
+      "pos": {
+        "x": -1.6,
+        "y": 0,
+        "z": 0.4
+      },
+      "yaw": 0,
+      "hot": false,
+      "activateAt": 0,
+      "blockAt": 0
+    },
+    {
+      "type": "Door",
+      "id": "door1",
+      "pos": {
+        "x": -1.5,
+        "y": 0,
+        "z": 3.5
+      },
+      "yaw": 0,
+      "hot": false,
+      "activateAt": 0,
+      "blockAt": 0
+    },
+    {
+      "type": "Door",
+      "id": "door2",
+      "pos": {
+        "x": 1.5,
+        "y": 0,
+        "z": 3.5
+      },
+      "yaw": 0,
+      "hot": true,
+      "activateAt": 0,
+      "blockAt": 0
+    },
+    {
+      "type": "FireVolume",
+      "id": "fire_door2",
+      "pos": {
+        "x": 1.5,
+        "y": 0,
+        "z": 4.4
+      },
+      "yaw": 0,
+      "hot": false,
+      "activateAt": 0,
+      "blockAt": 0
+    },
+    {
+      "type": "FireVolume",
+      "id": "fire_corridor",
+      "pos": {
+        "x": 3.2,
+        "y": 0,
+        "z": 8.5
+      },
+      "yaw": 0,
+      "hot": false,
+      "activateAt": 10,
+      "blockAt": 0
+    },
+    {
+      "type": "ExitPoint",
+      "id": "exit_main",
+      "pos": {
+        "x": 0,
+        "y": 0,
+        "z": 7.5
+      },
+      "yaw": 0,
+      "hot": false,
+      "activateAt": 0,
+      "blockAt": 45
+    },
+    {
+      "type": "FireVolume",
+      "id": "fire_main",
+      "pos": {
+        "x": 0,
+        "y": 0,
+        "z": 7.0
+      },
+      "yaw": 0,
+      "hot": false,
+      "activateAt": 45,
+      "blockAt": 0
+    },
+    {
+      "type": "Elevator",
+      "id": "elevator",
+      "pos": {
+        "x": 3.5,
+        "y": 0,
+        "z": 6.0
+      },
+      "yaw": 90,
+      "hot": false,
+      "activateAt": 0,
+      "blockAt": 0
+    },
+    {
+      "type": "Stairwell",
+      "id": "stairs",
+      "pos": {
+        "x": -3.8,
+        "y": 0,
+        "z": 8.8
+      },
+      "yaw": -90,
+      "hot": false,
+      "activateAt": 0,
+      "blockAt": 0
+    },
+    {
+      "type": "ExitPoint",
+      "id": "exit_side",
+      "pos": {
+        "x": -3.8,
+        "y": 0,
+        "z": 6.5
+      },
+      "yaw": -90,
+      "hot": false,
+      "activateAt": 0,
+      "blockAt": 0
+    },
+    {
+      "type": "AssemblyPoint",
+      "id": "assembly",
+      "pos": {
+        "x": -5.0,
+        "y": 0,
+        "z": 11.0
+      },
+      "yaw": 0,
+      "hot": false,
+      "activateAt": 0,
+      "blockAt": 0
+    }
+  ],
+  "hazards": [
+    {
+      "type": "Smoke",
+      "start": 30,
+      "over": 30,
+      "from": 2.4,
+      "to": 1.3
+    }
+  ]
+}
